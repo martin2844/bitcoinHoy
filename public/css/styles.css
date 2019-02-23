@@ -1,0 +1,84 @@
+.allRates {
+    padding: 2rem;
+}
+
+.rates {
+
+    border-style: solid;
+    border: 2px;
+}
+
+
+.navCustom{
+  background-color: #3c9fed;
+
+}
+
+.lightColor {
+  background-color:#F9F4F1;
+  padding-top: 2rem;
+}
+
+.darkColor {
+  background-color:#B9D1D3;
+}
+
+/*main app css styles */
+.left {
+  padding-left: 6rem;
+  text-align: right;
+}
+
+.right {
+  padding-right: 6rem;
+  text-align: left;
+}
+
+.center {
+text-align: center;
+}
+
+.mainApp {
+  padding: 2rem 12rem 6rem;
+}
+
+.mainAppLarge{
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: -0.5rem;
+}
+
+.mainAppLarge2{
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.mainAppPrice {
+padding: 1rem;
+}
+
+.display-4 {
+  text-align: center;
+  letter-spacing: 0.5rem;
+}
+
+/*Secondary App */
+
+.form1 {
+  padding-top: 2rem;
+  width: 25rem;
+  margin: auto;
+
+}
+
+.form2 {
+  width: 25rem;
+  margin: auto;
+
+}
+
+.centerForms {
+padding-bottom: 2rem;
+text-align: center;
+margin: auto;
+}
