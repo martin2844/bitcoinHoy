@@ -16,7 +16,8 @@ const currencyTags = document.querySelector('#currencyTags');
 const selCurrency = document.querySelector("#selCurrency");
 const output = document.querySelector('#output');
 const output1 = document.querySelector('#output1');
-
+var arrow = document.querySelector(".down");
+let spitPercent = 0;
 
 //this will be the API
 const url = "https://api.coinmarketcap.com/v1/ticker/";
@@ -42,15 +43,61 @@ function getPesos() {
     fetch(url).then(function (response) {
         return response.json();
     }).then(function (data) {
-        let pesulios = "$" + (Math.round(JSON.parse(data)[0].price_ars * 100) / 100);
-        console.log(pesulios);
+        let pesulios = "$" + (Math.round(JSON.parse(data)[0].price_ars * 100) / 100) + '<div id="percent" style="display: inline-block" title=""> <i class="up fas fa-chevron-circle-up"></i><i class="down fas fa-chevron-circle-down"></i> </div>';
         document.querySelector(".valorEnPesos").innerHTML = pesulios;
+        console.log("when does this happen");
     }).catch(function (error) {
         console.log(JSON.stringify(error));
     });
 
 }
 getPesos();
+
+
+
+function getPercentage() {
+    let url = '/price/' + "ARS" ;
+    fetch(url).then(function (response) {
+        return response.json();
+    }).then(function (data) {
+        let changePercent =  JSON.parse(data)[0].percent_change_24h;
+        console.log(changePercent);
+        let arrowDown = document.querySelector(".down");
+        let arrowUp = document.querySelector(".up");
+        let diva = document.getElementById("percent");
+        if (changePercent >= 0) {
+          //make green arrow appear
+          console.log("upper");
+            arrowDown.style.display = "none" ;
+           // arrow.style.display = "none";
+           diva.title = "+" + changePercent + "% con respecto ayer";
+
+        } else {
+          console.log("downer");
+          arrowUp.style.display = "none" ;
+          diva.title = changePercent + "% con respecto ayer";
+
+
+        }
+
+
+
+
+
+    }).catch(function (error) {
+        console.log(JSON.stringify(error));
+    });
+
+
+}
+
+getPercentage();
+
+
+
+
+
+
 
 function getOneRate() {
     let curValue = currencyTags.value;

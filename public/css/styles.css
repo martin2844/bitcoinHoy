@@ -51,6 +51,7 @@ text-align: center;
 .mainAppLarge2{
   font-size: 3rem;
   font-weight: 400;
+
 }
 
 .mainAppPrice {
@@ -82,3 +83,41 @@ padding-bottom: 2rem;
 text-align: center;
 margin: auto;
 }
+
+/* Arrows */
+
+.up {
+  font-size: 1rem;
+  color: green;
+  position: relative;
+  transform: translate(0%,-50%);
+  display: inline;
+}
+
+
+.down {
+  font-size: 1rem;
+  color: red;
+  position: relative;
+  transform: translate(-180%,-50%);
+  display: block;
+}
+
+.container-pesos {
+
+  text-align: center;
+  display: inline;
+
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+
+
+
+
+/* TOOLTIP */
